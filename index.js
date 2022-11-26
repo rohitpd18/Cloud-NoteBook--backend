@@ -12,6 +12,11 @@ const port = process.env.PORT || 5000;
 app.use(cors())
 app.use(express.json());
 
+// sending response to home page
+app.get('/',(req, res)=>{
+  res.send('Hello cleaver developer')
+})
+
 // Avaliable Routes
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/notes", require("./routes/notes"));
