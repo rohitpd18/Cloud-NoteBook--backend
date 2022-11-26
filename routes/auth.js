@@ -104,7 +104,7 @@ router.post(
       res.json({sucess, authToken });
     } catch (error) {
       console.error(error.message);
-      res.status(500).send({sucess, massage:"Sorry Some Internal Error occured"});
+      res.status(500).send({sucess, massage:error.message});
     }
   }
 );
